@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>random matrix</title>
+</head>
+<body>
+    <h1>random matrix</h1>
+    <label for="minRows">行数の最小値 (n):</label>
+    <input type="number" id="minRows" name="minRows" min="1" value="2">
+    <label for="maxRows">行数の最大値 (n):</label>
+    <input type="number" id="maxRows" name="maxRows" min="1" value="5"><br><br>
+    <label for="minCols">列数の最小値 (m):</label>
+    <input type="number" id="minCols" name="minCols" min="1" value="2">
+    <label for="maxCols">列数の最大値 (m):</label>
+    <input type="number" id="maxCols" name="maxCols" min="1" value="5"><br><br>
+    <button onclick="generateTable()">生成</button><br><br>
+    <textarea id="output" rows="10" cols="50" readonly></textarea>
+
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function generateTable() {
+            const minRows = parseInt(document.getElementById('minRows').value);
+            const maxRows = parseInt(document.getElementById('maxRows').value);
+            const minCols = parseInt(document.getElementById('minCols').value);
+            const maxCols = parseInt(document.getElementById('maxCols').value);
+            
+            const rows = getRandomInt(minRows, maxRows);
+            const cols = getRandomInt(minCols, maxCols);
+            
+            let output = '';
+
+            for (let i = 0; i < rows; i++) {
+                let row = '';
+                for (let j = 0; j < cols; j++) {
+                    row += Math.floor(Math.random() * 4) + ' ';
+                }
+                output += row.trim() + '\n';
+            }
+
+            document.getElementById('output').value = output.trim();
+        }
+    </script>
+</body>
+</html>
