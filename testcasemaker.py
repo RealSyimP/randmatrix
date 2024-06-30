@@ -11,8 +11,6 @@ for i in range(h):
     p = random.randint(0, 3)
     grid1[i][j] = p
 
-#random.shuffle(grid1)
-
 list = []
 for i in range(h):
   for j in range(w):
