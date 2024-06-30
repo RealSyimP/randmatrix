@@ -3,7 +3,7 @@ GPTに感謝を
 ↓ヴィジュアライザ  
 https://gen3987.github.io/visualizer/    
 
-testcasemaker.pyを作ったので、そちらを使ったほうが便利かも    
+testcasemaker.pyを作ったので、テストケースの生成はそちらを使ったほうが便利かも    
 
 以下のコード(by GPT-4o)を書き換えることで、JSON形式のファイルに変換できる。  
 ```C++
