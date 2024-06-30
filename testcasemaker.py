@@ -1,8 +1,8 @@
 import random
 import numpy as np
 
-h = 32 #random.randint(32, 256)
-w = 32 #random.randint(32, 256)
+h = random.randint(32, 256)
+w = random.randint(32, 256)
 grid1 = [[0 for i in range(w)]for j in range(h)]
 grid2 = [[0 for i in range(w)]for j in range(h)]
 
